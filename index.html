@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Head-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width"/>
+        <title>Bryce Coggins' Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="./my_portfolio.css">
+    </head>
+
+    <!--Body-->
+    <body class="Background">
+
+        <!--Navbar-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a> 
+            <a href="#Slideshow" onclick="openSlideshow()" ondblclick="closeSlideshow()">Slideshow</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">Github</a>
+            <a href="#Contact" onclick="openForm()" ondblclick="closeForm()">Contact</a>
+        </div>
+        <br>
+        <!--Background video-->
+        <br>
+        <br>
+        <br>
+        <div  id="Home">
+            <video autoplay muted loop id="Computer_Video">
+                <source src="./img/portfolio_background_2.1.mp4" type="video/mp4">
+                    <a href="http://www.videezy.com">B Roll by Videezy</a>
+                    <!--If video does not show-->
+                    Your browser does not support html5 video!
+            </video>
+        </div>
+        <!--Vid text-->
+        <div class="Video_text">
+            <h1 class="white-text">Bryce Coggins' Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <br>Welcome! My name is Bryce Coggins and this is my portfolio website. Here you will learn some about me and what I do!
+                    <br>Thanks for showing interest in my work and I hope you enjoy my website!
+                    <br>
+                    <br>
+                </p>
+            </strong>
+        </div>
+
+        <!--Slideshow-->
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+                    <!-- Slide 1 of 4-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="img/Bryce Coggins .png" alt="Picture of me">
+                        <br>
+                        <div class="text">I can assist with your next project!</div>
+                    </div>
+                    <!-- Slide 2 of 4-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="img/HTML_CSS_and_JavaScript.jpeg" alt="HTML,CSS,JS">
+                        <br>
+                        <div class="text">I am trained in<br>
+                        CSS, HTML, and JavaScript</div>
+                    </div>
+                    <!-- Slide 3 of 4-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="img/cybersecurity.jpg" alt="cybersecurity lock">
+                        <br>
+                        <div class="text">I also trained in<br>
+                         Front and Backend Security</div>
+                    </div>
+                    <!-- Slide 4 of 4-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="img/business.jpg" alt="Business">
+                        <br>
+                        <div class="text"><a onclick="openForm()" href="#Contact">Contact me for any inquiry!</a></div>
+                    </div>
+                </div>
+                <br>
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+
+        <!--About-->
+        <div class="Row" id="About">
+            <!--Left column-->
+            <div class="Column_2">
+                <img src="./img/cyberspace.png" alt="image of cyberspace">
+            </div>
+            <!--Right column-->
+            <div class="Column_1">
+                <h1>About Me</h1>
+                <p>
+                    I am an entry level software developer and cybersecurity specialist.<br>
+                    <br>
+                    <br>I am currently enrolled in <a href="https://www.learncodinganywhere.com" target="blank">The Tech Academy's</a> CyberSecurity Bootcamp where I trained in Python, HTML, CSS,  and front and back end security!
+                    <br>
+                    <br>I am an experienced developer and infosec specialist who would enjoy to hear from you!  <a onclick="openForm()" href="#myForm">Contact</a> me below!                  
+                </p>
+            </div>
+        </div>
+
+
+        <!--GitHub-->
+        <div class="Row" id="GitHub">
+            <!--Left-->
+            <div class="Column_1">
+                <h1>GitHub</h1>
+                <p>
+                    View my coding assignments, projects, non-profit work, and miscellaneous coding activities on GitHub!
+                    <br>
+                    <p class="center"><a href="https://github.com/Brycecoggins" target="_blank">Bryce Coggins' GitHub</a></p>
+                </p>
+            </div>
+            <!--Right-->
+            <div class="Column_2">
+                <a href="https://github.com/Brycecoggins" target="_blank"><img  src="./img/github.png" alt="GitHub Logo"></a>
+            </div>
+        </div>
+
+        <!--Contact-->
+        <div class="Row" id="Contact">
+           
+            <div class="Column_2 Column_tall">
+                <img src="./img/img_2.png" alt="Contact_Image">
+                <h1>Contact Me!</h1>
+            </div>
+            <!--Right-->
+            <div class="Column_1 Column_tall" id="myForm" >            
+                    <!--Form-->
+            <form action="" method="POST" class="form-container">
+                <label>Name:</label>
+                    <input type="text" id="Name" name="Name" placeholder="Type your name here!">
+                <label>Email:</label>
+                    <input type="text" id="Email" name="Email" placeholder="Enter email here!">
+                <label>Message</label>
+                    <input type="text" id="Message" name="Message" placeholder="Please leave a message!">
+                <br>
+                <br>
+            
+                <div class="center">
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                </div>
+            </form>
+
+            </div>
+            
+            <br>
+            <br>
+        </div>
+
+        <!--Footer-->
+        <footer>
+            <p>
+                <p class="center">Thank Your for Visiting My Website!
+                <br>If you haven't yet please fill the contact form to keep in touch!</p>
+                <br>
+                <div class="center">
+                    <button type="button" class="contact button" onclick="openForm()" ondblclick="closeForm()">CONTACT ME!</button>
+                </div>
+            </p>
+        </footer>
+        <script src="my_portfolio.js"></script>
+
+
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
